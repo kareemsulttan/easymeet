@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Easy Meet</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+    <!--header-->
+		<header>
+				<nav class="navbar navbar-expand-lg bg-white pt-4 pb-4 navbar-light bg-light px-xs-0">
+          <div class="container">
+            <a class="navbar-brand mr-0" href="index.html">
+              <img src="images/EasyMeet.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar top-bar opacity-6 mt-0"></span>
+              <span class="icon-bar middle-bar opacity-6"></span>
+              <span class="icon-bar bottom-bar opacity-6"></span>				
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-primary">Sign Up</button>
+                </li>
+              </ul>
+            </div>            
+          </div>
+				</nav>
+    </header>
+    <!--free sign up section-->
+    <section class="free-sign-up mt-5 w-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-12 px-2">
+            <div class="main-title pt-3 pb-4">
+              <h1>Sign up for free</h1>              
+            </div>
+            <form class="mb-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" aria-describedby="emailHelp" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputName">Full name</label>
+                <input type="text" class="form-control" id="exampleInputName" placeholder="Full name" required>
+              </div>
+              <div class="form-group password-input">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" id="passInput" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                <span toggle="#input-pwd" class="fa fa-fw fa-eye field-icon toggle-password" onclick="showPass()"></span>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 medium-size" disabled>Continue</button>
+            </form>
+            <span class="have-account">I already have the account. <a href="#">Log in</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+</html>

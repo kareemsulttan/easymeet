@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Easy Meet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body id="dashboard-6"  class="onboarding dashboard">
+  <div class="modal fade" id="avilabilityStatus1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title small-size align-self-center">Changing your Availability</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="MeeterLine mx-0"></div>
+        <div class="modal-body pb-0">
+          <div class="avilability ml-auto text-left">         
+            <span class="small-size">Your Availability Status</span>
+            <div class="align-self-center row d-flex mx-0 my-2">
+            <div class="button b2" id="button-10">
+              <input id="modalAvilabilityChk" type="checkbox" class="checkbox w-100 h-100 p-0 m-0">
+              <div class="knobs small-size">
+                <span class="small-size">Available</span>
+              </div>
+            </div>            
+            </div>
+          </div>
+          <div class="small-size text-left opacity-8 py-2">
+            When your status is set to ‘Available’, your Requestors and You will receive browser and email notifications in order to start your meetings.
+          </div>
+          <div class="form-group mb-0 px-0 py-3">
+            <h5 class="small-size align-self-center text-left mb-2 pb-1">I am Available for the next:</h5>
+              <div class="radio">
+                <input id="radio-1" name="radio" type="radio" checked>
+                <label for="radio-1" class="radio-label small-size opacity-8">10 minutes</label>
+              </div>      
+              <div class="radio">
+                <input id="radio-2" name="radio" type="radio">
+                <label for="radio-2" class="radio-label small-size opacity-8">30 minutes</label>
+              </div>   
+              <div class="radio">
+                <input id="radio-3" name="radio" type="radio">
+                <label for="radio-3" class="radio-label small-size opacity-8">1 hour</label>
+              </div>       
+              <div class="radio">
+                <input id="radio-4" name="radio" type="radio">
+                <label for="radio-4" class="radio-label small-size opacity-8">2 hours</label>
+              </div>   
+              <div class="radio">
+                <input id="radio-5" name="radio" type="radio">
+                <label for="radio-5" class="radio-label small-size opacity-8">4 hours</label>
+              </div>    
+              <div class="radio">
+                <input id="radio-6" name="radio" type="radio">
+                <label for="radio-6" class="radio-label small-size opacity-8">8 hours</label>
+              </div>    
+          </div>
+          <div class="MeeterLine"></div>
+          <div class="form-group px-0 py-3 mb-0">
+            <div class="chkbox">
+              <label>
+                <input type="checkbox" name="checkbox" value="css"/>
+                <span class="small-size opacity-8">Open Meeting Room Window</span>
+              </label>           
+            </div>
+            <div class="chkbox">
+              <label>
+                <input type="checkbox" name="checkbox" value="css" checked />
+                <span class="small-size opacity-8">Send Notifications to all Requestors</span>
+              </label>
+            </div>
+          </div>
+          <div class="MeeterLine"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn discard p-0 m-0 mr-auto medium-size opacity-6" data-dismiss="modal">Discard changes</button>
+          <button type="button" class="btn btn-primary small-size m-0 update">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- notAvailable modal-->
+  <div class="modal fade" id="avilabilityStatus2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title small-size align-self-center">Changing your Availability</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="MeeterLine mx-0"></div>
+        <div class="modal-body pb-0">
+          <div class="avilability ml-auto text-left">         
+            <span class="small-size">Your Availability Status</span>
+            <div class="align-self-center row d-flex mx-0 my-2">
+              <div class="button b2" id="button-10">
+                <input id="modalAvilabilityChk2" type="checkbox" class="checkbox w-100 h-100 p-0 m-0" checked="unchecked">
+                <div class="knobs small-size">
+                  <span class="small-size">Available</span>
+                </div>
+              </div>            
+            </div>
+            <div class="MeeterLine"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn discard p-0 m-0 mr-auto medium-size opacity-6" data-dismiss="modal">Discard changes</button>
+            <button type="button" class="btn btn-primary small-size m-0 update">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--header-->
+  <header class="pb-3 bg-white">
+    <nav class="navbar navbar-expand-lg pt-4 pb-4">
+      <div class="container">
+        <a class="navbar-brand mr-0" href="index.html">
+          <img class="d-none d-lg-block" src="images/EasyMeet.svg" alt="logo">
+          <img class="d-lg-none" src="images/EM.svg" alt="logo small">
+        </a>
+        <span class="small-size extend d-lg-none">Unavailable. <br /> <a href="#">Become Available</a></span>
+        <span class="small-size extend d-lg-none d-none">Available for: <br /> <span>7</span> hours <span>59</span> minutes. <a href="#">Change</a></span>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar top-bar opacity-6 mt-0"></span>
+          <span class="icon-bar middle-bar opacity-6"></span>
+          <span class="icon-bar bottom-bar opacity-6"></span>				
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--poersonal-details-->
+  <section class="personal-details bg-white pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="media text-left col-sm-12 col-lg-7">
+          <div class="align-self-center text-center mr-3 default-opacity avatar-container">
+            <img class="mb-1" src="images/photo.png" alt="photo">
+          </div>
+          <!--show on mobile only-->
+          <div class="meeting-room align-self-center m-0 ml-auto d-lg-none">
+            <button class="btn btn-default meeting-btn bg-white small-size"><i class="fa fa-camera" aria-hidden="true"></i> Meeting Room</button>                
+          </div>  
+          <!--show on large screen only-->
+          <div class="media-body align-self-center d-none d-lg-block">
+            <h2 class="mt-0">John Doe</h2>
+            <a class="edit-bio small-size opacity-6" href="#">Founder of Herjavec Group | Shark on ABC's Shark Tank | Bestselling Author</a>
+            <br />
+            <span class="url-room small-size" class="mb-0">easymeet.io/johndoe-2 <i class="fa fa-clone" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <!--show on mobile only-->
+        <div class="media-body align-self-center text-left col-sm-12 mt-3 d-lg-none">
+          <h2 class="mt-0">John Doe</h2>
+          <a class="edit-bio small-size opacity-6" href="#">Founder of Herjavec Group | Shark on ABC's Shark Tank | Bestselling Author</a>
+          <br />
+          <span class="url-room small-size" class="mb-0">easymeet.io/johndoe-2 <i class="fa fa-clone" aria-hidden="true"></i></span>
+        </div>
+        <div class="avilability ml-auto text-right col-sm-12 col-lg-5 d-none d-lg-block">         
+          <span class="small-size">My Availability:</span>
+          <div class="align-self-center row d-flex mx-0 my-2">
+          <!--show on large screen only-->
+          <div class="meeting-room align-self-center mr-3 ml-auto">
+            <button class="btn btn-default meeting-btn bg-white small-size"><i class="fa fa-camera" aria-hidden="true"></i> Meeting Room</button>                
+          </div>   
+          <div class="button b2" id="button-10">
+            <input id="avilabilityChk" type="checkbox" class="checkbox w-100 h-100 p-0 m-0">
+            <div class="knobs small-size">
+              <span class="small-size">Available</span>
+            </div>
+          </div>            
+          </div>
+          <span class="small-size extend">Available for <span>7</span> hours <span>59</span> minutes. <a href="#">Extend &#11206;</a></span>
+        </div>
+      </div>
+  </section>
+  <!--search-->
+  <section class="search mt-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 px-0">
+          <div class="row noMobileMargin">
+            <span class="col-lg-3 col-sm-12 align-self-center small-size text-left pr-0 pendingRequests"><span>6</span> Pending Requests</span>
+            <div class="form-group col-sm-12 has-search col-lg-6 mb-0 px-0 py-0">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control small-size" placeholder="Search by name or email">
+            </div>            
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mr-auto bulk-action text-right pr-0">
+          <span class="col-3 align-self-center small-size text-left pr-0">Bulk Actions:</span>
+          <div class="notifyBtnContainer d-inline-block">
+          <button id="notifyAll" class="btn default-btn small-size bg-white notify ml-3" onclick="notiFy()">
+            <i class="fa fa-bell-o mr-1" aria-hidden="true"></i>
+            Notify All
+          </button>
+          <span id="notifyPopup" class="popuptext bg-white small-size text-left default-opacity">
+            We just notified all your requestors.
+            <br />
+            Notifications are not available for the next 10 minutes in order to prevent spam
+            <br />
+            <span id="dismiss" class="text-right small-size blue d-inline-block w-100 mt-1">Dismiss</span>
+          </span>            
+          </div>
+          <button class="btn default-btn small-size bg-white reject"><i class="fa fa-times mr-1" aria-hidden="true"></i>Reject All</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--meeting-requests-->
+  <section class="requests-list personal-details pb-5">
+      <div class="container">
+          <div class="row">
+            <div class="requster-container bg-white w-100 mt-3">
+              <div class="row mx-0">
+              <div class="media text-left mr-auto">
+                <div class="align-self-start text-center mr-3 avatar-container bg-white medium-size">
+                  <span>CF</span>
+                </div>
+                <div class="media-body align-self-center">
+                  <h2 class="my-0 requesterName">Cody Fisher</h2>
+                  <span class="url-room small-size" class="mb-0">codyfisher@mail.com</span>
+                </div>
+              </div>   
+              <!--show on large screen only-->
+              <div class="ml-auto d-none d-lg-block">
+                <div class="bulk-action text-right pr-0">
+                  <button class="btn default-btn small-size bg-white notify ml-3"><i class="fa fa-bell-o mr-1" aria-hidden="true"></i>Notify</button>
+                  <button class="btn default-btn small-size bg-white reject"><i class="fa fa-times mr-1" aria-hidden="true"></i>Reject</button>
+                </div>
+              </div>                   
+              </div> 
+              <div class="request-summary text-left col-lg-9 pr-0 mt-3 noMobileMargin noMobilePadding">
+                <h3 class="small-size mb-0">Request Summary:</h3>
+                <span class="small-size" style="opacity: 0.6;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat. Vitae suscipit tellus mauris a. Cursus metus aliquam eleifend mi in nulla posuerenecta. </span>
+              </div>   
+              <div class="ml-auto d-lg-none">
+                <div class="bulk-action text-right pr-0">
+                  <button class="btn default-btn small-size bg-white notify ml-3 noMobileMargin"><i class="fa fa-bell-o mr-1" aria-hidden="true"></i>Notify</button>
+                  <button class="btn default-btn small-size bg-white reject"><i class="fa fa-times mr-1" aria-hidden="true"></i>Reject</button>
+                </div>
+              </div>      
+            </div>
+            <div class="requster-container bg-white w-100 mt-3">
+              <div class="row mx-0">
+              <div class="media text-left mr-auto">
+                <div class="align-self-start text-center mr-3 avatar-container bg-white medium-size">
+                  <span>JC</span>
+                </div>
+                <div class="media-body align-self-center">
+                  <h2 class="my-0 requesterName">Cody Fisher</h2>
+                  <span class="url-room small-size" class="mb-0">codyfisher@mail.com</span>
+                </div>
+              </div>   
+              <!--show on large screen only-->
+              <div class="ml-auto d-none d-lg-block">
+                <div class="bulk-action text-right pr-0">
+                  <button class="btn default-btn small-size bg-white notify ml-3 noMobileMargin"><i class="fa fa-bell-o mr-1" aria-hidden="true"></i>Notify</button>
+                  <button class="btn default-btn small-size bg-white reject"><i class="fa fa-times mr-1" aria-hidden="true"></i>Reject</button>
+                </div>
+                </div>                    
+              </div>    
+              <!--show on mobile only-->
+              <div class="ml-auto d-lg-none">
+                <div class="bulk-action text-right pr-0">
+                  <button class="btn default-btn small-size bg-white notify ml-3 noMobileMargin"><i class="fa fa-bell-o mr-1" aria-hidden="true"></i>Notify</button>
+                  <button class="btn default-btn small-size bg-white reject"><i class="fa fa-times mr-1" aria-hidden="true"></i>Reject</button>
+                </div>
+              </div>   
+            </div>
+          </div>
+      </div>
+  </section>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

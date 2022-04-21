@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Easy Meet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body id="dashboard-2"  class="onboarding dashboard">
+
+  <!--header-->
+  <header class="pb-3 bg-white">
+    <nav class="navbar navbar-expand-lg pt-4 pb-4">
+      <div class="container">
+        <a class="navbar-brand mr-0" href="index.html">
+          <img src="images/EasyMeet.svg" alt="logo">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar top-bar opacity-6 mt-0"></span>
+          <span class="icon-bar middle-bar opacity-6"></span>
+          <span class="icon-bar bottom-bar opacity-6"></span>				
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--poersonal-details-->
+  <section class="personal-details bg-white pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="media text-left col-lg-6 col-sm-12 pl-0">
+          <div class="align-self-center text-center mr-3 avatar-container">
+            <img class="mb-1" src="images/addPhoto.png" alt="camera">
+          </div>
+          <div class="media-body align-self-center">
+            <h2 class="mt-0">John Doe</h2>
+            <a class="edit-bio small-size opacity-6" href="#">Click to edit your bio <i class="fa fa-pencil" aria-hidden="true"></i></a>
+            <br />
+            <span class="url-room small-size" class="mb-0">easymeet.io/johndoe-2 <i class="fa fa-clone" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="avilability ml-auto text-right">         
+          <span class="small-size">My Availability:</span>
+          <div class="align-self-center row d-flex mx-0 mt-2">
+          <div class="meeting-room d-none">
+            <button class="btn btn-default meeting-btn small-size"><i class="fa fa-camera" aria-hidden="true"></i> Meeting Room</button>                
+          </div>   
+          <div class="button b2" id="button-10">
+            <input type="checkbox" class="checkbox w-100 h-100 p-0 m-0">
+            <div class="knobs small-size">
+              <span class="small-size">Available</span>
+            </div>
+          </div>            
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--search-->
+  <section class="search mt-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 px-0">
+          <div class="row noMobileMargin">
+            <span class="col-lg-3 col-sm-12 align-self-center small-size text-left pr-0 pendingRequests"><span>0</span> Pending Requests</span>
+            <div class="form-group col-sm-12 has-search col-lg-6 mb-0 px-0 py-0">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" class="form-control small-size" placeholder="Search by name or email">
+            </div>            
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mr-auto bulk-action text-right pr-0">
+          <span class="col-3 align-self-center small-size text-left pr-0">Bulk Actions:</span>
+          <div class="notifyBtnContainer d-inline-block">
+            <button class="btn default-btn small-size bg-white notify ml-3" disabled><i class="fa fa-bell-o mr-1" aria-hidden="true"></i>Notify All</button>
+          </div>
+          <button class="btn default-btn small-size bg-white reject" disabled><i class="fa fa-times mr-1" aria-hidden="true"></i>Reject All</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--meeting-requists-->
+  <section class="meeting-requists">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-sm-12 px-2">
+          <div class="createURL mb-3">
+            <div class="empty-icon m-auto text-center">
+              Empty Icon
+            </div>
+          <h3 class="my-3 medium-size">You have no meeting requests yet.</h3>
+          <p class="mb-4">Make sure to share your link with the people you want to meet online.</p>
+        </div>
+        <div class="createdURL text-center mb-2">
+            easymeet.io/johndoe-2
+        </div>
+        <div class="row icons mb-4">
+          <div class="col mx-2 px-0"><a class="px-1 py-2" href="#"><img class="pr-1" src="images/Copy.png" alt="Copy"> <span>Copy</span>  </a></div>
+          <div class="col mx-2 px-0"><a class="px-1 py-2" href="#"><img class="pr-1" src="images/facebook.png" alt="Facebook"><span>Facebook</span>  </a></div>
+          <div class="col mx-2 px-0"><a class="px-1 py-2" href="#"><img class="pr-1" src="images/twitter.png" alt="Twitter"> <span>Twitter</span>  </a></div>
+          <div class="col mx-2 px-0"><a class="px-1 py-2" href="#"><img class="pr-1" src="images/linkedin.png" alt="LinkedIn"> <span>LinkedIn</span>  </a></div>
+          <div class="col mx-2 px-0"><a class="px-1 py-2" href="#"><img class="pr-1" src="images/Envelope.png" alt="Email"> <span>Email</span>  </a></div>
+        </div>                 
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

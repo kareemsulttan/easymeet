@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Caller/Meeting Room Active</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="callerRoomActiveSidebar" class="bgdark withSideBar meetRoom waitingHost">
+		<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title small-size align-self-center">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="MeeterLine mx-0"></div>
+          <div class="modal-body text-left pb-0">
+            <h3 class="small-size gray6 fw-600">AUDIO</h3>
+            <div class="form-group">
+              <label for="microphone">Microphone</label>
+              <select class="form-control" id="microphone">
+                <option>Default - Headset Microphone</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="speakers">Speakers</label>
+              <a href="#" class="blue float-right">Test Speakers</a>
+              <select class="form-control" id="speakers">
+                <option>Default - Speakers</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <h3 class="small-size gray6 fw-600 pt-4">VIDEO</h3>
+            <div class="form-group">
+              <label for="camera">Web Camera</label>
+              <select class="form-control" id="camera">
+                <option>Default - Camera</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quality">Quality</label>
+              <select class="form-control" id="quality">
+                <option>Standart definition (360p)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+        </div>
+        <div class="MeeterLine mx-0"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn discard p-0 m-0 mr-auto medium-size opacity-6" data-dismiss="modal">Discard changes</button>
+          <button type="button" class="btn btn-primary small-size m-0 update">Save</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!--navbar-->
+    <!--show in mobile-->
+    <div class="d-lg-none d-xl-none d-flex p-3 footerDetails bg-white">
+      <div class="waiting d-flex align-items-center text-left py-2 mr-4 pr-4">
+        <div class="media text-left">
+          <div class="media-body align-self-center">
+            <div class="d-flex align-items-center justify-content-start">
+              <h2 class="my-0 requesterName mr-3">John Doe</h2>
+              <span class="mic">
+                <button class="btn mr-2"><i class="fa fa-microphone-slash red" aria-hidden="true"></i>
+                <i class="fa fa-microphone hide" aria-hidden="true"></i>
+              </button>
+              <button class="btn"><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+            </span>										
+            </div>
+            <span class="url-room small-size d-block"> <button class="navbar-toggler blue collapsed p-0 small-size navToggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              Show details
+            </button>
+          </span>
+          </div>
+        </div>
+      </div>
+      <div class="exit py-2 ml-auto d-flex align-items-center">
+        <button class="btn small-size gray8 p-0"><i class="fa fa-sign-out pr-1 font16" aria-hidden="true"></i>Exit Room</button>
+      </div>
+    </div>
+    <section class="container">
+      <nav class="navbar-collapse fixed-top p-0 offcanvas-collapse">
+        <div class="modal-header bg-white py-4 borderBottomt d-lg-none d-xl-none d-flex">
+          <button type="button" class="close medium-size fw-500 mr-auto pl-0" aria-label="Close">
+            <span aria-hidden="true"><i class="fa fa-times mr-2" aria-hidden="true"></i> Close</span>
+          </button>
+        </div>
+        <div class="w-100">
+          <ul class="text-left list-unstyled small-size roomList w-100 mb-3">
+            <li>
+              <div class="waiting">
+                <div class="media flex-column align-items-center">
+                  <div class="text-center avatar-container noBorder default-opacity mb-2">
+                    <img class="w-100" src="images/photo.png" alt="photo">
+                  </div>
+                  <div class="media-body text-center mb-2">
+                    <h2 class="my-0 requesterName font18 fw-600 mb-2">John Doe</h2>
+                    <span class="url-room gray8 small-size d-block">Founder of Herjavec Group | Shark on ABC's Shark Tank | Bestselling Author</span>
+                  </div>
+                </div>
+              </div>
+              <div class="nextMeeting d-flex py-2 align-items-center">
+                <button class="btn gray6 p-0 grayBorder insetShadow small-size w-100 py-2">
+                   Cancel Request								
+                </button>							
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+		</section>
+		<!--host button-->
+    <div class="host text-right  d-none d-lg-block">
+      <button class="btn px-4 m-4 small-size">Host Web Camera</button>
+		</div>
+		<!--main room-->
+		<div class="container mainRoom">
+			<div class="row justify-content-center align-items-center h-100">
+				<div>
+					<div class="media mainRoomMedia personal-details media-body text-center d-block mb-4">
+						<h2 class="font36 white">Host Web Camera</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<footer class="bg-white py-3 px-2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-7 d-flex footerDetails">
+            <!--media-->
+						<div class="waiting d-lg-block d-none align-items-center text-left py-2 mr-4 pr-4 borderRight">
+							<div class="media text-left">
+								<div class="align-self-center default-opacity text-center noBorder mr-2 mt-1 avatar-container bg-white medium-size">
+									<img class="w-100" src="images/photo.png" alt="photo">
+								</div>
+								<div class="media-body align-self-center">
+									<div class="d-flex align-items-center justify-content-start">
+										<h2 class="my-0 requesterName mr-3">John Doe</h2>
+										<span class="mic">
+											<button class="btn mr-2"><i class="fa fa-microphone-slash red" aria-hidden="true"></i>
+											<i class="fa fa-microphone hide" aria-hidden="true"></i>
+										</button>
+										<button class="btn"><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+									</span>										
+									</div>
+									<span class="url-room small-size d-block"> <button class="navbar-toggler blue collapsed p-0 small-size navToggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    Show details
+                  </button>
+                </span>
+								</div>
+							</div>
+            </div>
+            <!--avilability-->
+						<div class="myAvilability d-flex align-items-start justify-content-center flex-column py-2 mr-4 pr-4">
+              <div class="d-lg-none d-sm-block">
+                <p class="font14 mb-1">Available for</p>
+                <span class="small-size gray6 text-left">7h 49m.<a class="blue" href="#"> Adjust</a> </span>                
+              </div>
+              <div class="sm-none text-left">
+                <p class="font14 mb-1">My Availability</p>
+                <span class="small-size gray6 text-left">Available for 7h 49m. <a class="blue" href="#"> Adjust</a> </span>
+              </div>
+						</div>
+					</div>
+					<div class="col-xs-5 d-flex ml-auto justify-content-end footerDetails">
+            <!--settings-->
+							<div class="settings py-2 d-flex align-items-center mr-4 pr-4 sm-none borderRight">
+                <button id="settingsBtn" class="btn medium-size gray8 p-0">
+                  <i class="fa fa-cog pr-1" aria-hidden="true"></i> Settings
+                </button>		
+              </div>
+              <!--mic button-->
+							<div class="mic py-2 mr-4 pr-4 d-flex align-items-center borderRight">
+								<button class="btn mr-2"><i class="fa fa-microphone-slash red" aria-hidden="true"></i>
+									<i class="fa fa-microphone hide" aria-hidden="true"></i>
+								</button>
+								<button class="btn"><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+              </div>
+              <!--exit-->
+							<div class="exit py-2 d-flex align-items-center sm-none">
+								<button class="btn small-size gray8 p-0"><i class="fa fa-sign-out pr-3 font16" aria-hidden="true"></i>Exit Room</button>
+							</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+</html>
